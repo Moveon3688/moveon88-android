@@ -25,7 +25,7 @@ jobs:
       run: ./gradlew assembleDebug
 
     - name: Upload APK
-      run: echo "upload skipped (error workaround)"
-      with:
-        name: app-debug.apk
-        path: app/build/outputs/apk/debug/app-debug.apk
+  uses: actions/upload-artifact@v3
+  with:
+    name: app-debug.apk
+    path: app/build/outputs/apk/debug/app-debug.apk
